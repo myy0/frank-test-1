@@ -1,7 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {  //要导出的对象是这个对象,node.js的模块定义，必须这么写
-  mode: 'production', //影响提示及代码最终效果
   entry: {        //entry是整个程序的入口是哪里
       index: './lib/index.tsx'   //入口叫index，index的位置是...
   },
@@ -21,25 +20,4 @@ module.exports = {  //要导出的对象是这个对象,node.js的模块定义�
       }
     ]
   }, 
-  plugins: [
-      new HtmlWebpackPlugin({    //生成新的htmlHtmlWebpackPlugin配置
-          title: 'FUI',
-          template: 'index.html'  //原来的html是什么
-        
-      })
-  ],
-  externals: {      //告诉webpack下面的两个是外部的库
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'react',
-      root: 'React',
-    },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'react-dom',
-      root: 'ReactdOM',     
-    },
-  } 
-}
+} 
