@@ -1,5 +1,4 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {  //要导出的对象是这个对象,node.js的模块定义，必须这么写
   entry: {        //entry是整个程序的入口是哪里
     index: './lib/index.tsx'   //入口叫index，index的位置是...
